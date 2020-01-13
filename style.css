@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap');
+/*FIXME: 39:56 is where in the video I stopped */
+body {
+  overflow-x: hidden;
+  font-family: 'Libre Baskerville', serif;
+  background-color: white;
+}
+
+/* Navbar css */
+.navbar {
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  background-color: rgba(0,0,0, 0.6)!important;
+}
+
+.navbar-brand img {
+  height: 2.3rem;
+}
+
+.navbar-nav li {
+  padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding-top: 0.8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #1e69e2b7;
+}
+
+/* Landing Page css */
+.home-inner {
+  background-image: url(img/lighthouse.jpg); /* FIXME: Change this later to actual image */
+}
+
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute; 
+  top: 38%; 
+  z-index: 1; 
+  color: white;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.caption h1 {
+  font-size: 3.8rem;
+  font-weight: 700; 
+  letter-spacing: .3rem; 
+  padding-bottom: 1rem;
+}
+
+.caption h4 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.img-fluid {
+  border-radius: 50%;
+  border: 5px solid #1e69e2b7;
+}
+
+.cv-button {
+  background-color: #1e69e2b7;
+  border-radius: 25%;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.cv-button:hover {
+  background-color: RoyalBlue;
+}
+
+/* Navigation bar for the resume section */
+#navigation {
+  top: 180px;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 0; 
+}
+
+#navigation ul {
+  margin: 0;
+  padding: 0; 
+}
+
+#navigation li {
+  font-weight: 700;
+  list-style: none;
+  margin-bottom: 10px; 
+}
+
+#navigation li a {
+  color: #000000; 
+}
+
+/* Actual Resume section css */
+.resume {
+  width: 100%;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px; 
+}
+
+.resume .text {
+  width: calc(100% - 50px); 
+}
+
+.resume .date {
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  color: #1e69e2b7; 
+}
+
+.resume h2 {
+  font-size: 24px;
+  font-weight: 700; 
+}
+
+.resume .position {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000; 
+}
+
+.resume-section {
+  padding: 7em 0;
+  position: relative; 
+}
+  
+@media (max-width: 767.98px) {
+  .resume-section {
+    padding: 6em 0; 
+  } 
+}
+
+.brown-list {
+  font-size: 15px;
+}
+
+.job-list {
+  padding: 5px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.page-footer {
+  background-color: #1e69e2b7;
+}
+
+.page-footer h1 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.contact {
+  color: black;
+}
+
+.page-footer h5 {
+  padding-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/

@@ -129,6 +129,22 @@ body {
   font-weight: 700; 
 }
 
+.resume h3 {
+  font-size: 16px;
+  color: gray;
+  font-weight: 700; 
+}
+
+.project-icon {
+  background-color: none;
+  text-decoration: none;
+  color: #1e69e2b7;
+}
+
+.project-icon:hover {
+  color: #003892b7
+}
+
 .resume .position {
   font-size: 18px;
   font-weight: 700;

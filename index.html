@@ -61,7 +61,7 @@
 		<div class="caption text-center">
 			<h4><i>Hello, I'm</i></h4>
 			<h1>Jason Ho</h1>
-			<h4><i>Software & Hardware Developer</i></h4>
+			<h4><i>Software & Hardware Engineer</i></h4>
 			<button class="cv-button" type="submit" onclick="window.open('Jason_Ho_2020_2021.pdf')">Download Resume</button>
 		</div>
 
@@ -84,11 +84,7 @@
 					<div class="row justify-content-start pb-3">
 						<div class="col-md-12 heading-section">
 							<h2 class="mb-4">About Me</h2>
-							<p>Self-motivated student with a background in systems 
-								programming in C and Assembly trying to get into chip design learning Verilog. </p>
-
-								
-								
+							<p>Self-motivated student with a background in FPGA design and embedded systems programming trying to get into custom hardware design. </p>
 
 							<p>I am a natural leader with experience spearheading software
 								and engineering projects by approaching management with a
@@ -132,10 +128,10 @@
 									<p>GPA: 3.90</p>
 									<ul class="brown-list">
 										<li class="job-list"><b>Current Coursework:</b> 
-											VLSI Design, 
+											VLSI Design and Implementation, 
 											Digital Electronics Systems Design,
 											Linear System Analysis,
-											Algorithms
+											Design and Analysis of Algorithms
 										</li>
 										<li class="job-list"><b>Selected Courses:</b> 
 											Digital Logic Computing Systems,
@@ -171,18 +167,31 @@
 
 							<div class="resume d-flex ">
 								<div class="text pl-3">
+									<span class="date">September 2020 - Present</span>
+									<h2>Project Manager and Team Lead</h2>
+									<span class="position">Develop for Good</span>
+									<ul class="brown-list">
+										<li class="job-list">Volunteering for CARE International on analysis and visualization of USAID Hamzari data
+										</li>
+										<li class="job-list"> Supervising a team of 6 Frontend, Backend, UI/UX developers, and Data Scientists
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="resume d-flex ">
+								<div class="text pl-3">
 									<span class="date">June 2020 - September 2020</span>
-									<h2>Embedded Systems Software Engineering Intern</h2>
+									<h2>FPGA Engineering Intern</h2>
 									<span class="position">Nabsys</span>
 									<ul class="brown-list">
-										<li class="job-list">Developed signal processing algorithms and state machines in Vivado on Xilinx FPGA 
-											for analysis of tagged DNA for whole genome sequencing; able to perform real time data processing of 
-											hundreds of detectors.
+										<li class="job-list">Fabricated signal processing algorithms and state machines on Xilinx Kintex FPGA for analysis of tagged DNA
+											for whole genome sequencing
 										</li>
-										<li class="job-list"> Optimized FPGA design to significantly reduce slices used, 
-											allowing for parallelization of algorithms on FPGA significantly increasing throughput.
+										<li class="job-list"> Optimized FPGA design to significantly reduce slices used, allowing for 16x parallelization of algorithms,
+											considerably increasing throughput to process real time streaming of hundreds of sensors
 										</li>
-										<li class="job-list"> Verified design of FPGA with C++ scripts and python scripting
+										<li class="job-list"> Verified FPGA design with C++, Python, and timing analysis through Vivado
 										</li>
 									</ul>
 								</div>
@@ -195,21 +204,11 @@
 									<h2>Security Engineering Intern</h2>
 									<span class="position">Brown University CIS</span>
 									<ul class="brown-list">
-										<li class="job-list">Rewrote copyright infringement script to run significantly
-											faster using object oriented design with an
-											emphasis on readability by rewriting documentation with PEP-8, PEP-257,
-											PEP-484, and SciPy. The script
-											uses DeskPro API to manage infringements while zgrepping through firewall
-											logs. Able to search 2 times
-											faster
+										<li class="job-list">Designed Copyright Infringement Script in Python that parsed DMCA emails, searched firewall logs and verified
+											infringement on University traffic, saving non-technical staff over 3 hours of time per case
 										</li>
-										<li class="job-list"> Queried SQL databases to correlate Crowdstrike data with
-											firewall permit-deny traffic in real-time dashboards
-											to display the current state of malicious University traffic flow.
-										</li>
-										<li class="job-list"> Reduced Sumo Logic SIEMs parse times for firewall logs
-											with reg-ex field extraction rules that were 20 times
-											faster to allow for real-time updating of dashboards.
+										<li class="job-list"> Queried SQL databases to correlate Crowdstrike data with firewall permit-deny traffic in real-time dashboards
+											to display current state of malicious traffic by optimizing firewall parsing by 20 times using Regex
 										</li>
 									</ul>
 								</div>
@@ -227,7 +226,7 @@
 									<h2>32 bit FPGA CPU Processor</h2>
 									<ul class="brown-list">
 										<li class="job-list">
-											Single cycle CPU processor with ARM Assembly machine code instructions written in Verilog and deployed on a Xilinx Spartan 3 FPGA development board.
+											Developing MIPS style processor for ARM Thumb Instructions written in Verilog and deployed on a Xilinx Spartan 3 FPGA development board.
 										</li>
 									</ul>
 
@@ -245,14 +244,13 @@
 									</h2>
 									<ul class="brown-list">
 										<li class="job-list">
-											Deep learning GANS Model written in Python that uses SPADE normalization, Tensorflow and Keras to producephotorealistic images from segmentation masks.
+											Implemented Deep learning GANS Model written in Python utilizing SPADE normalization, Tensorflow and Keras to produce photorealistic images from segmentation masks
 										</li>
 										<li class="job-list">
-											Used subset of MIT’s ADE20k dataset specifically parsed for outdoor landscape imagery.
+											Compiled subset of MIT’s ADE20k dataset specifically parsed for outdoor landscape scenery.
 										</li>
 										<li class="job-list">
-											Implementation focuses on reducing computational cost by using only one GPU, with similarly low average FIDscore of 60.7 on images in the test set.
-										</li>
+											Remodeled original architecture to reduce computational cost to 1 GPU from 16 with similar Frechet Inception Distances of 60.7 on images in the test set
 									</ul>
 								</div>
 							</div>
@@ -263,10 +261,10 @@
 									<h2>ARM Fitness Monitor</h2>
 									<ul class="brown-list">
 										<li class="job-list">
-											Prototyped on a STM32 board where ARM core ran freeRTOS to manage sensor data collection threads as wellas threads to compile data with FIFO Queues connecting them.
+											Prototyped on a STM32 board ARM processor running freeRTOS to manage sensor data collection threads and threads to compile data with FIFO Queue buffers.
 										</li>
 										<li class="job-list">
-											Integrated a optical heartrate sensor, an accelerometer, and a gyroscope with the ability to double tap the deviceto switch between modes using signal processing of the accelerometer.
+											Integrated a optical heartrate sensor, spO2 sensor, accelerometer, and gyroscope with the ability to double tap the device to switch between modes using signal processing of the accelerometer.
 										</li>
 									</ul>
 
@@ -287,10 +285,13 @@
 									<ul class="brown-list">
 										
 										<li class="job-list">
-											A multipurpose accessibility android app written in Java that uses augmented reality and Google Cloud's Firebase mlkit to overlay dyslexic friendly font in the camera preview using real time OCR data processing.
+											Planned and oversaw creation of a multipurpose accessibility android app written 
+											in Java that uses augmented reality and Google Cloud’s Firebase mlkit to overlay dyslexic 
+											friendly font in the camera preview using real time OCR data processing with multiple 
+											foreign language support.
 										</li>
 										<li class="job-list">
-											Reads text from the photo gallery, displaying in the same font with foreign language support.
+											Implemented text bounding box algorithms and custom font support whilst managing three other team members.
 										</li>
 									</ul>
 
@@ -303,16 +304,10 @@
 									<h2>Database Server</h2>
 									<ul class="brown-list">
 										<li class="job-list">
-											Multi-threaded server written in C that used a binary search tree to store
-											information with fine-grained locking.
-											It could be controlled by manipulating signals sent to the server and was
-											tested against over 10,000 client threads.
+											Engineered multi-threaded server written in C using TCP Protocol that used a binary search tree to store information with fine-grained locking and signal handling.
 										</li>
 										<li class="job-list">
-											I am reading about SQLITE and its implementation to replace the binary
-											search tree with more optimized
-											methods in the second iteration of the project.
-
+											Evaluated and load tested against over 10,000 client threads on the database without failure.
 										</li>
 									</ul>
 
@@ -381,13 +376,17 @@
 							<h2 class="heading">Skills</h2>
 							<ul>
 								<li class="job-list">
-									<b>Computer Science Skills: </b>Python, Verilog, C, C++, Java, MATLAB, Linux (Debian), 
-									x86 Assembly, Scheme, LaTex, GIT, Vivado, Excel
+									<b>Programming Skills: </b> Verilog, Python, C, C++, Java, MATLAB, Linux (Debian), ARM Assembly, SQL, 
+									x86 Assembly, Scheme, LaTex, GIT, 
 								</li>
 								<li class="job-list">
-									<b>Engineering Skills: </b> Woodworking, 3D Printing, Laser Cutting, Soldering,
-									Milling, Lathe, Solidworks
+									<b>Engineering Skills: </b> Vivado, Solidworks, SPICE, Woodworking, 3D Printing, Laser Cutting, Soldering,
+									Milling, Lathe
 
+								</li>
+
+								<li class="job-list">
+									<b>Languages: </b> English (Native), Cantonese (Native), Spanish (Intermediate)
 								</li>
 							</ul>
 						</div>

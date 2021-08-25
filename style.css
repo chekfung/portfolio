@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap');
-/*FIXME: 39:56 is where in the video I stopped */
 body {
   overflow-x: hidden;
   font-family: 'Libre Baskerville', serif;
-  background-color: white;
+  background-color:    #8ca883  ;
 }
 
 /* Navbar css */
@@ -34,7 +33,7 @@ body {
 
 /* Landing Page css */
 .home-inner {
-  background-image: url(img/lighthouse.jpg); /* FIXME: Change this later to actual image */
+  background-image: url(img/lighthouse.jpg); 
 }
 
 .caption {
@@ -65,11 +64,12 @@ body {
 
 .img-fluid {
   border-radius: 50%;
-  border: 5px solid #1e69e2b7;
+  border: 5px solid #655d80;
+  width: 80%;
 }
 
 .cv-button {
-  background-color: #1e69e2b7;
+  background-color: #655d80;
   border-radius: 25%;
   border: none;
   color: white;
@@ -79,7 +79,7 @@ body {
 }
 
 .cv-button:hover {
-  background-color: RoyalBlue;
+  background-color: rgb(170, 42, 187);
 }
 
 /* Navigation bar for the resume section */
@@ -121,7 +121,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.6);
-  color: #1e69e2b7; 
+  color: #655d80; 
 }
 
 .resume h2 {
@@ -131,18 +131,18 @@ body {
 
 .resume h3 {
   font-size: 16px;
-  color: gray;
+  color: #655d80;
   font-weight: 700; 
 }
 
 .project-icon {
   background-color: none;
   text-decoration: none;
-  color: #1e69e2b7;
+  color: #655d80;
 }
 
 .project-icon:hover {
-  color: #003892b7
+  color: #a01e95b7
 }
 
 .resume .position {
@@ -175,7 +175,7 @@ p {
 }
 
 .page-footer {
-  background-color: #1e69e2b7;
+  background-color: #655d80;
 }
 
 .page-footer h1 {
@@ -192,28 +192,3 @@ p {
 }
 
 
-
-
-
-
-
-
-
-/*============ BOOTSTRAP BREAK POINTS:
-
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-=============*/

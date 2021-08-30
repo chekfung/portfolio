@@ -68,6 +68,17 @@ body {
   width: 80%;
 }
 
+#profile-img {
+  background: url('img/me.jpg');
+  background-size: contain;
+  height: 500px;
+  width: 500px;
+}
+
+#profile-img:hover {
+  background-image: url('img/me2.jpg');
+}
+
 .cv-button {
   background-color: #655d80;
   border-radius: 25%;

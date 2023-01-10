@@ -223,3 +223,20 @@ p {
 }
 
 
+a:link {
+    color: #655d80;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #655d80;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #a01e95b7;
+    background-color: transparent;
+    text-decoration: underline;
+  }

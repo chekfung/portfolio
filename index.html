@@ -62,7 +62,7 @@
 			<!-- FIXME: Issue with viewing website on phone; hardware engineer goes on top of the headshot -->
 			<span id="title-name">Jason Ho</span> <br>
 			<!-- <span id="title-title"><i>PhD Student at UT Austin</i></span> <br> -->
-			<button class="cv-button" type="submit" onclick="window.open('Jason_Ho_2022_2023_Resume_H_updated1.pdf')">Download Résumé</button>
+			<button class="cv-button" type="submit" onclick="window.open('Jason_Ho_2023_2024_Resume_H.pdf')">Download Résumé</button>
 		</div>
 
 		<!--- End of Landing Page -->
@@ -135,7 +135,8 @@
 											Computer Architecture,
 											Cross-Layer Machine Learning Hardware Software Co-design,
 											Parallelism and Locality,
-											Unconventional Computation
+											Prediction Mechanisms in Computer Architecture,
+											Parallel Computer Architecture
 
 										</li>
 									</ul>
@@ -157,7 +158,6 @@
 										<li class="job-list"><b>Selected Courses:</b> 
 											Topics in Bioelectronics,
 											Digital Signal Processing, 
-											Materials Science,
 											Semiconductor Physics,
 											VLSI Design, 
 											Digital Electronics Design, 
@@ -165,7 +165,7 @@
 											Communication Systems, 
 											Linear System Analysis
 											Computer Vision,
-											Data Science,
+											Data Science
 										</li>
 										<li class="job-list"><b>Student Activities:</b>
 											Brown Band, 
@@ -238,14 +238,30 @@
 
 							<div class="resume d-flex ">
 								<div class="text pl-3">
+									<span class="date">May 2023 - August 2023</span>
+									<h2>Power and Performance Lead / Architect Intern</h2>
+									<span class="position">AMD</span>
+									<ul class="brown-list">
+										<li class="job-list"> Characterized power and performance on future APU plus discrete GPU platforms focused on power allocation algorithms between the APU and GPU on GPU-bound benchmarks
+										</li>
+										<li class="job-list"> Owned and deployed an internal data analysis tool that linked Power BI and internal databases to automate multi-phasic statistical analysis of benchmark logs, providing an average 100x speedup from previous methods
+										</li>
+										<li class="job-list"> Maintained, built and ran benchmarks on 8 separate systems for power and performance characterization
+										</li>
+									</ul>
+								</div>
+							</div>
+
+
+							<div class="resume d-flex ">
+								<div class="text pl-3">
 									<span class="date">June 2022 - August 2022</span>
 									<h2>VLSI Read Channel Design and Verification Intern</h2>
 									<span class="position">Seagate Technology</span>
 									<ul class="brown-list">
-										<li class="job-list">Researched verification environment transactions with DUT to enforce object-oriented data structures
-											in transition to UVM
+										<li class="job-list"> Lead verification transition for the team from VMM to UVM environment while reusing as much code as possible
 										</li>
-										<li class="job-list"> Developed firmware initialization and configuration code for read channel UVM environment
+										<li class="job-list"> Developed firmware initialization and configuration code for read channel UVM environment with functionality for large-scale read channel testbenches
 										</li>
 									</ul>
 								</div>
@@ -257,9 +273,9 @@
 									<h2>VLSI Design and Verification Engineering Intern</h2>
 									<span class="position">Seagate Technology</span>
 									<ul class="brown-list">
-										<li class="job-list">Designed and verified new RTL block responsible for optimizing throughput of ECC correction onhard drive reads set to tape-out in early 2022
+										<li class="job-list"> Designed and optimized RTL block to increase ECC correction throughput in the hard drive read pipeline 
 										</li>
-										<li class="job-list"> Designed and developed verification environment in VMM and UVM in SystemVerilog for new RTL features
+										<li class="job-list"> Developed VMM infrastructure with one other engineer to verify the new RTL block robustly
 										</li>
 									</ul>
 								</div>
@@ -286,11 +302,9 @@
 									<h2>FPGA Engineering Intern</h2>
 									<span class="position">Nabsys</span>
 									<ul class="brown-list">
-										<li class="job-list">Fabricated signal processing algorithms and state machines on Xilinx Kintex FPGA for analysis of tagged DNA
-											for whole genome sequencing
+										<li class="job-list"> Fabricated two signal processing algorithms for the analysis of tagged DNA data for genome sequencing
 										</li>
-										<li class="job-list"> Optimized FPGA design to significantly reduce slices used, allowing for 16x parallelization of algorithms,
-											considerably increasing throughput to process real time streaming of hundreds of sensors
+										<li class="job-list"> Optimized FPGA design to reduce size by 2x while increasing throughput by 16x to process streaming of 128 sensors
 										</li>
 										<li class="job-list"> Verified FPGA design with C++, Python, and timing analysis through Vivado
 										</li>
@@ -327,10 +341,10 @@
 									<h2>CNN FPGA Hardware Accelerator</h2>
 									<ul class="brown-list">
 										<li class="job-list">
-											Designed and deployed CNN accelerator on AWS FPGAs using blocking systolic matrix multipliers on FashionMNIST dataset with Xilinx Vitis HLS tools
+											Designed and deployed CNN accelerator with two other team members on AWS FPGAs using blocking systolic matrix multipliers with Xilinx Vitis HLS tools
 										</li>
 										<li class="job-list">
-											Reduced trained parameter sizes by 75% using custom fixed-point 8 bit value representations with no loss to test accuracy
+											Reduced trained parameter size by 75% using custom fixed-point 8 bit values with almost no loss to test accuracy
 										</li>
 									</ul>
 								</div>
@@ -338,8 +352,8 @@
 
 							<div class="resume d-flex ">
 								<div class="text pl-3">
-									<span class="date">January 2021 - Present</span>
-									<h2>Convolution ASIC Tapeout</h2>
+									<span class="date">January 2021 - May 2022</span>
+									<h2>Convolution ASIC Design</h2>
 									<ul class="brown-list">
 										<li class="job-list">
 											Designed architecture and implementing RTL for ASIC tapeout in Efabless shuttle for real-time 2D image convolution using Yosys, Magic, and OpenLane
@@ -357,7 +371,7 @@
 									<h2>RISC-V Processor on FPGA</h2>
 									<ul class="brown-list">
 										<li class="job-list">
-											Implemented front end RTL on abbreviated RISC-V instruction set with branch prediction and five stage pipeline on Intel FPGA board
+											Implemented front end RTL on abbreviated RISC-V instruction set with branch prediction and five stage pipeline on Intel Altera FPGA board
 										</li>
 										<li class="job-list">
 											Verified all design blocks in ModelSim and ran RTL through Intel Quartus
@@ -492,10 +506,10 @@
 							<h2 class="heading">Skills</h2>
 							<ul>
 								<li class="job-list">
-									<b>Programming: </b> Verilog, SystemVerilog, C, C++, ASM, Python
+									<b>Programming: </b> Verilog, SystemVerilog, C, C++, ASM, Python, Pytorch, SQL
 								</li>
 								<li class="job-list">
-									<b>Applications: </b> Innovus, Genus, DC Compiler, Verdi, ModelSim, LTSpice, Electric, Matlab
+									<b>Applications: </b> Innovus, Matlab, ModelSim, SPICE, Gem5, ChampSim, PowerBI
 
 								</li>
 
@@ -517,8 +531,7 @@
 
 	</div>
 	<!--- End Resume Section -->
-
-	<div class="text-center"> Last Updated: 01/09/2023 </div>
+	<div class="text-center"> Last Updated: 08/22/2023 </div>
 
 	<!--- Contact Section -->
 	<div id="contact" class="offset">

@@ -6,8 +6,8 @@ import clsx from "clsx";
 // TODO: Change this to include other backgorund images I want
 
 const images = [
-    "/img/lighthouse.jpg",
-    "/gallery/example.png",
+    "/portfolio/img/lighthouse.jpg",
+    "/portfolio/gallery/example.png",
     // Add more background images here as you add them to public/img
     // "/img/mountain.jpg", 
 ];

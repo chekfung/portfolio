@@ -60,7 +60,7 @@ export default async function Home() {
                     <div className="relative group shrink-0">
                         <div className="w-56 h-56 md:w-80 md:h-80 rounded-full border-[6px] border-white/30 shadow-2xl overflow-hidden relative z-10 transition-transform duration-500">
                             <img
-                                src="/img/me_reduced_size.jpg"
+                                src="/portfolio/img/me_reduced_size.jpg"
                                 alt="Jason Ho"
                                 className="w-full h-full object-cover"
                             />

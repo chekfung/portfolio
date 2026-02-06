@@ -58,7 +58,7 @@ export default function Navigation({ variant = "transparent" }: NavigationProps)
                         </Link>
                     ))}
                     <a
-                        href="/CV_2025_2026.pdf"
+                        href="/portfolio/CV_2025_2026.pdf"
                         target="_blank"
                         className={clsx(
                             "hidden sm:block border px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all",

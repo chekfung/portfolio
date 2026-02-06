@@ -29,7 +29,7 @@ export function getGalleryImages(): GalleryImage[] {
             .replace(/\b\w/g, c => c.toUpperCase()); // Title Case
 
         return {
-            src: `/gallery/${fileName}`,
+            src: `/portfolio/gallery/${fileName}`,
             alt: label,
             label: label
         };

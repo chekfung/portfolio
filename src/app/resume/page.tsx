@@ -14,7 +14,7 @@ export default function Resume() {
                         <div className="text-lg text-slate-600 flex flex-col gap-1">
                             <a href="mailto:jasonchekfungho@gmail.com" className="hover:text-purple-600 transition-colors">jasonchekfungho@gmail.com</a>
                             <a href="tel:+14019657728" className="hover:text-purple-600 transition-colors">(+1) 401-965-7728</a>
-                            <Link href="/" className="hover:text-purple-600 transition-colors">https://chekfung.github.io/portfolio</Link>
+                            {/* <Link href="/" className="hover:text-purple-600 transition-colors">https://chekfung.github.io/portfolio</Link> */}
                         </div>
                     </div>
                     <a

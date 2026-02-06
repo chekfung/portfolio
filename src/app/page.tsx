@@ -51,7 +51,7 @@ export default async function Home() {
                                 href="/resume"
                                 className="bg-stone-900 hover:bg-stone-800 hover:-translate-y-0.5 text-white text-lg px-10 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl font-bold tracking-wide flex items-center justify-center gap-2"
                             >
-                                View Resume <ArrowRight size={20} />
+                                View Résumé <ArrowRight size={20} />
                             </Link>
                         </div>
                     </div>

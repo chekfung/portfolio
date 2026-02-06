@@ -7,7 +7,6 @@ import clsx from "clsx";
 
 const images = [
     "/portfolio/img/lighthouse.jpg",
-    "/portfolio/gallery/example.png",
     // Add more background images here as you add them to public/img
     // "/img/mountain.jpg", 
 ];

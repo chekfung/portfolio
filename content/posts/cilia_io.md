@@ -1,0 +1,11 @@
+---
+title: Cilia.io Paper Submitted for Review!
+date: 2025-12-8
+---
+
+I am pleased to announce that my first, first-author biology x ML paper, Cilia.io: Computer vision and machine learning reveal spatial patterns of cilia beating dynamics in the spinal cord, has been submitted for review to a top-tier journal in developmental biology!
+
+Check out the project on Biorxiv: https://www.biorxiv.org/content/10.64898/2025.12.10.693099v1 
+
+Here is the abstract!
+Motile cilia coordinate fluid flows that are essential for normal tissue physiology and function. Cilia display diverse beating waveforms, and while pronounced defects are strongly associated with motile ciliopathies, more subtle alterations may also influence disease manifestations1–3. Finer quantification of ciliary dynamics is critical for a full understanding of cilia-associated disorders, but the heterogeneity of cilia beating dynamics makes accurate and robust characterization challenging. Because existing tools have proven to be limiting in noisy in vivo environments4–6, we developed Cilia.io, a machine learning (ML)-based quantification tool that uses state-of-the-art vision transformers to segment cilia out of the background based on their biological features. Cilia.io enables fast, accurate, and reproducible quantification of motile cilia morphodynamics and outperforms existing tools. Indeed, using Cilia.io, we discovered distinct regional differences in ciliary waveforms in the zebrafish spinal cord. Cilia.io’s ability to capture subtle ciliary defects was further demonstrated by analyzing a novel allele in the ciliopathy gene bbs2 that causes a highly heterogeneous scoliosis phenotype. In these mutants, only dorsal cilia displayed altered beating dynamics, while ventral cilia remained largely unaffected. Our new tool therefore represents a substantial advance on existing methods and suggests that additional fine-scale analyses of ciliary beating will be important for understanding organismal phenotypes and cilia-driven disease.

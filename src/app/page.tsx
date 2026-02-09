@@ -30,41 +30,43 @@ export default async function Home() {
             <div className="relative z-10 flex flex-col gap-12 pt-28 pb-20 px-4 md:px-8 max-w-7xl mx-auto w-full">
 
                 {/* HERO CARD */}
-                <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 animate-fade-in-up max-w-6xl mx-auto">
+                <section className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 animate-fade-in-up max-w-6xl mx-auto mt-12 md:mt-24">
 
                     {/* Text Content */}
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
-                        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-4 text-stone-900 drop-shadow-sm">
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-2xl px-4">
+                        <h1 className="text-7xl md:text-9xl font-bold tracking-tighter mb-6 text-stone-900 drop-shadow-md leading-[0.9]">
                             Jason Ho
                         </h1>
 
-                        <div className="bg-stone-900 text-stone-100 px-6 py-2 rounded-full font-bold uppercase tracking-widest text-sm mb-8 shadow-md">
+                        <div className="bg-stone-900 text-stone-100 px-8 py-3 rounded-full font-bold uppercase tracking-[0.2em] text-sm mb-10 shadow-xl border border-stone-800">
                             Ph.D. Candidate @ UT Austin
                         </div>
 
-                        <p className="text-xl md:text-2xl text-stone-100 mb-10 leading-relaxed font-medium drop-shadow-md">
+                        <p className="text-2xl md:text-3xl text-stone-100 mb-12 leading-relaxed font-medium drop-shadow-lg max-w-xl">
                             Researching ML Accelerators and Neuromorphic Computing.
                         </p>
 
-                        <div className="flex gap-5">
+                        <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
                             <Link
                                 href="/resume"
-                                className="bg-stone-900 hover:bg-stone-800 hover:-translate-y-0.5 text-white text-lg px-10 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl font-bold tracking-wide flex items-center justify-center gap-2"
+                                className="bg-stone-900 hover:bg-stone-800 hover:-translate-y-1 text-white text-xl px-12 py-4 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl font-bold tracking-widest flex items-center justify-center gap-3 border border-stone-800"
                             >
-                                View Résumé <ArrowRight size={20} />
+                                View Résumé <ArrowRight size={24} />
                             </Link>
                         </div>
                     </div>
 
                     {/* Headshot with Professional Border */}
-                    <div className="relative group shrink-0">
-                        <div className="w-56 h-56 md:w-80 md:h-80 rounded-full border-[6px] border-white/30 shadow-2xl overflow-hidden relative z-10 transition-transform duration-500">
+                    <div className="relative group shrink-0 mt-8 md:mt-0">
+                        <div className="w-64 h-64 md:w-[450px] md:h-[450px] rounded-full border-[8px] border-white/20 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] overflow-hidden relative z-10 transition-all duration-700 group-hover:scale-105 group-hover:border-white/40">
                             <img
                                 src="/portfolio/img/me_reduced_size.jpg"
                                 alt="Jason Ho"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                             />
                         </div>
+                        {/* Decorative background glow */}
+                        <div className="absolute inset-0 bg-stone-900/20 blur-3xl rounded-full scale-110 -z-10 group-hover:bg-stone-900/30 transition-all duration-700"></div>
                     </div>
 
                 </section>

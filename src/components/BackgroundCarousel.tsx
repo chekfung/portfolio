@@ -37,7 +37,7 @@ export default function BackgroundCarousel() {
                 />
             ))}
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-slate-900/90 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-stone-900/90 mix-blend-multiply"></div>
             <div className="absolute inset-0 bg-black/20"></div>
         </div>
     );

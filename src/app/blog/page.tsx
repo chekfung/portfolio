@@ -2,41 +2,49 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
+import { Calendar, ArrowRight } from "lucide-react";
 
 export default function Blog() {
     const posts = getSortedPostsData();
 
     return (
-        <main className="min-h-screen relative flex flex-col font-serif">
+        <main className="min-h-screen relative flex flex-col font-sans bg-[#FAF9F6] text-stone-900">
             <Navigation variant="solid" />
 
-            <div className="flex-grow container mx-auto px-6 max-w-4xl py-32 animate-fade-in-up">
-                <h1 className="text-5xl font-bold mb-12 text-stone-100 border-b border-white/20 pb-6 drop-shadow-md">
-                    Blog
-                </h1>
+            <div className="flex-grow max-w-3xl mx-auto w-full px-6 pt-32 pb-24">
+                <div className="border-b border-stone-300 pb-8 mb-12">
+                    <h1 className="font-serif text-4xl sm:text-5xl font-bold text-stone-900 mb-3">
+                        Blog & Notes
+                    </h1>
+                    <p className="text-stone-600 text-base">
+                        Writing on computer architecture, machine learning research, and technical side projects.
+                    </p>
+                </div>
 
-                <div className="grid gap-8">
+                <div className="space-y-6">
                     {posts.map((post) => (
-                        <article key={post.slug} className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg border border-white/10 hover:bg-white/20 transition-all duration-300 group">
+                        <article key={post.slug} className="bg-white border border-stone-200/90 p-8 rounded-xl hover:border-stone-400 hover:shadow-xs transition-all group">
+                            <div className="flex items-center gap-1.5 text-xs font-semibold text-stone-400 uppercase tracking-wider mb-3">
+                                <Calendar size={13} />
+                                {post.date}
+                            </div>
                             <Link href={`/blog/${post.slug}`}>
-                                <h2 className="text-2xl font-bold mb-3 text-stone-100 group-hover:text-white transition-colors">
+                                <h2 className="font-serif text-2xl font-bold text-stone-900 group-hover:text-stone-700 transition-colors mb-3 leading-snug">
                                     {post.title}
                                 </h2>
                             </Link>
-                            <div className="text-sm text-stone-300 mb-4 font-sans tracking-wide uppercase">{post.date}</div>
-                            <p className="text-stone-200 leading-relaxed mb-6 font-medium">
+                            <p className="text-stone-600 text-base leading-relaxed mb-6">
                                 {post.excerpt}
                             </p>
-                            <Link href={`/blog/${post.slug}`} className="text-stone-100 font-bold hover:text-white flex items-center gap-2">
-                                Read more <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            <Link href={`/blog/${post.slug}`} className="text-xs font-semibold uppercase tracking-wider text-stone-900 group-hover:text-stone-700 inline-flex items-center gap-1.5 transition-colors">
+                                Read Note <ArrowRight size={13} />
                             </Link>
                         </article>
                     ))}
 
                     {posts.length === 0 && (
-                        <div className="text-center py-20 bg-white/5 rounded-xl border-2 border-dashed border-white/20">
-                            <p className="text-stone-300 text-xl font-bold">No posts yet.</p>
-                            <p className="text-stone-400 mt-2">Check back soon for updates!</p>
+                        <div className="text-center py-16 bg-white rounded-xl border border-stone-200">
+                            <p className="text-stone-500 font-medium">No posts published yet.</p>
                         </div>
                     )}
                 </div>

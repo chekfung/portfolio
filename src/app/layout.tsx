@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville } from "next/font/google";
+import { Libre_Baskerville, Inter } from "next/font/google";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-libre-baskerville",
+  variable: "--font-serif",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Jason Ho",
-  description: "Portfolio of Jason Ho - PhD Student at UT Austin",
+  title: "Jason Ho — PhD Candidate @ UT Austin",
+  description: "Personal website & research portfolio of Jason Ho. PhD candidate in ECE at UT Austin specializing in ML accelerators, analog surrogate modeling, and neuromorphic architecture.",
 };
 
 export default function RootLayout({
@@ -19,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${libreBaskerville.variable} font-serif antialiased bg-[#8ca883] text-[#212529]`}>
+    <html lang="en" className={`${libreBaskerville.variable} ${inter.variable}`}>
+      <body className="font-sans antialiased bg-[#FAF9F6] text-stone-900 selection:bg-stone-800 selection:text-white">
         {children}
       </body>
     </html>

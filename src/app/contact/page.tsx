@@ -1,33 +1,32 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Mail, Github, Linkedin, Twitter, MapPin } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
     return (
-        <main className="min-h-screen relative flex flex-col font-serif">
+        <main className="min-h-screen relative flex flex-col font-sans bg-[#FAF9F6] text-stone-900">
             <Navigation variant="solid" />
 
-            <div className="flex-grow flex flex-col justify-center items-center px-4 py-32 animate-fade-in-up">
-                <div className="max-w-3xl w-full text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold text-stone-100 mb-6 drop-shadow-md">
-                        Contact
+            <div className="flex-grow flex flex-col justify-center items-center px-6 py-32">
+                <div className="max-w-2xl w-full text-center">
+                    <h1 className="font-serif text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
+                        Contact & Links
                     </h1>
-                    <p className="text-xl text-stone-200 mb-12 max-w-xl mx-auto font-medium">
-                        Always open to connecting! Please send inquiries to my email first for research and outreach, linkedin for work-related inquiries.
-                        Feel free to check out my github as well on all my research and personal projects!
+                    <p className="text-stone-600 text-base mb-10 max-w-xl mx-auto leading-relaxed">
+                        Always open to connecting! Please send inquiries to my email first for research and outreach, linkedin for work-related inquiries. Feel free to check out my github as well on all my research and personal projects!
                     </p>
 
-                    <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto">
+                    <div className="grid gap-4 sm:grid-cols-3 max-w-2xl mx-auto">
                         <a
                             href="mailto:jasonchekfungho@gmail.com"
-                            className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center gap-4 shadow-lg text-stone-100"
+                            className="bg-white border border-stone-200/90 p-6 rounded-xl hover:border-stone-400 hover:shadow-sm transition-all group flex flex-col items-center gap-3 text-stone-900"
                         >
-                            <div className="bg-stone-900 p-4 rounded-full text-stone-100 group-hover:scale-110 transition-transform">
-                                <Mail size={32} />
+                            <div className="bg-stone-100 p-3 rounded-full text-stone-800 group-hover:bg-stone-900 group-hover:text-white transition-colors">
+                                <Mail size={22} />
                             </div>
                             <div className="text-center">
-                                <h3 className="text-xl font-bold mb-1">Email</h3>
-                                <p className="text-stone-300">jasonchekfungho@gmail.com</p>
+                                <h3 className="font-semibold text-sm mb-0.5">Email</h3>
+                                <p className="text-stone-500 text-xs truncate max-w-[160px]">jasonchekfungho@gmail.com</p>
                             </div>
                         </a>
 
@@ -35,14 +34,14 @@ export default function Contact() {
                             href="https://www.linkedin.com/in/chekfung/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center gap-4 shadow-lg text-stone-100"
+                            className="bg-white border border-stone-200/90 p-6 rounded-xl hover:border-stone-400 hover:shadow-sm transition-all group flex flex-col items-center gap-3 text-stone-900"
                         >
-                            <div className="bg-[#0077b5] p-4 rounded-full text-white group-hover:scale-110 transition-transform">
-                                <Linkedin size={32} />
+                            <div className="bg-stone-100 p-3 rounded-full text-stone-800 group-hover:bg-[#0077b5] group-hover:text-white transition-colors">
+                                <Linkedin size={22} />
                             </div>
                             <div className="text-center">
-                                <h3 className="text-xl font-bold mb-1">LinkedIn</h3>
-                                <p className="text-stone-300">Connect professionally</p>
+                                <h3 className="font-semibold text-sm mb-0.5">LinkedIn</h3>
+                                <p className="text-stone-500 text-xs">/in/chekfung</p>
                             </div>
                         </a>
 
@@ -50,18 +49,16 @@ export default function Contact() {
                             href="https://github.com/chekfung"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center gap-4 shadow-lg text-stone-100"
+                            className="bg-white border border-stone-200/90 p-6 rounded-xl hover:border-stone-400 hover:shadow-sm transition-all group flex flex-col items-center gap-3 text-stone-900"
                         >
-                            <div className="bg-stone-800 p-4 rounded-full text-white group-hover:scale-110 transition-transform">
-                                <Github size={32} />
+                            <div className="bg-stone-100 p-3 rounded-full text-stone-800 group-hover:bg-stone-900 group-hover:text-white transition-colors">
+                                <Github size={22} />
                             </div>
                             <div className="text-center">
-                                <h3 className="text-xl font-bold mb-1">GitHub</h3>
-                                <p className="text-stone-300">Check out my code</p>
+                                <h3 className="font-semibold text-sm mb-0.5">GitHub</h3>
+                                <p className="text-stone-500 text-xs">@chekfung</p>
                             </div>
                         </a>
-
-
                     </div>
                 </div>
             </div>

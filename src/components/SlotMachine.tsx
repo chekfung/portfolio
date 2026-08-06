@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import confetti from "canvas-confetti";
-import { Coins, Trophy, RotateCcw, Info } from "lucide-react";
+import { Coins, Trophy, RotateCcw } from "lucide-react";
 import clsx from "clsx";
 
 const SYMBOLS = ["7️⃣", "💎", "🔔", "🍊", "🍋", "🍒"];
@@ -22,7 +22,7 @@ export default function SlotMachine() {
     const [isSpinning, setIsSpinning] = useState(false);
     const [balance, setBalance] = useState(100);
     const [lastWin, setLastWin] = useState(0);
-    const [message, setMessage] = useState("Spin to win!");
+    const [message, setMessage] = useState("Press spin to play");
 
     const getRandomSymbol = useCallback(() => {
         const totalWeight = WEIGHTS.reduce((a, b) => a + b, 0);
@@ -42,7 +42,6 @@ export default function SlotMachine() {
         setLastWin(0);
         setMessage("Spinning...");
 
-        // Simulate reel spin animation
         let spinCount = 0;
         const interval = setInterval(() => {
             setReels([
@@ -56,7 +55,7 @@ export default function SlotMachine() {
                 clearInterval(interval);
                 finalizeSpin();
             }
-        }, 100);
+        }, 80);
     }, [isSpinning, balance, getRandomSymbol]);
 
     const finalizeSpin = () => {
@@ -71,17 +70,12 @@ export default function SlotMachine() {
         const result = finalReels.join("");
         let winAmount = 0;
 
-        // Check for 3 of a kind
         if (PAYTABLE[result as keyof typeof PAYTABLE]) {
             winAmount = PAYTABLE[result as keyof typeof PAYTABLE];
-        }
-        // Check for 2 cherries
-        else if (finalReels[0] === "🍒" && finalReels[1] === "🍒") {
+        } else if (finalReels[0] === "🍒" && finalReels[1] === "🍒") {
             winAmount = 5;
-        }
-        // Small break-even win for any 2 matching symbols (except cherries which are handled)
-        else if (finalReels[0] === finalReels[1] || finalReels[1] === finalReels[2]) {
-            winAmount = 2; // consolation prize
+        } else if (finalReels[0] === finalReels[1] || finalReels[1] === finalReels[2]) {
+            winAmount = 2;
         }
 
         if (winAmount > 0) {
@@ -89,18 +83,18 @@ export default function SlotMachine() {
             setLastWin(winAmount);
 
             if (winAmount >= 50) {
-                setMessage(`JACKPOT! +${winAmount}`);
+                setMessage(`Jackpot! +${winAmount} tokens`);
                 confetti({
-                    particleCount: 150,
-                    spread: 70,
+                    particleCount: 120,
+                    spread: 60,
                     origin: { y: 0.6 },
-                    colors: ["#8ca883", "#FFFFFF", "#1c1917"]
+                    colors: ["#1c1917", "#525252", "#a8a29e"]
                 });
             } else {
-                setMessage(`Nice! +${winAmount}`);
+                setMessage(`Win! +${winAmount} tokens`);
                 confetti({
-                    particleCount: 50,
-                    spread: 40,
+                    particleCount: 40,
+                    spread: 35,
                     origin: { y: 0.7 }
                 });
             }
@@ -110,85 +104,75 @@ export default function SlotMachine() {
     };
 
     return (
-        <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
-            {/* Simple Balance Display */}
-            <div className="flex items-center gap-6 mb-8">
-                <div className="bg-stone-900 border border-stone-800 px-6 py-3 rounded-xl shadow-xl flex items-center gap-3">
-                    <Coins className="text-yellow-500" size={20} />
-                    <span className="text-stone-400 text-xs font-bold uppercase tracking-widest">Balance:</span>
-                    <span className="text-2xl font-bold text-white tracking-tighter">{balance}</span>
+        <div className="w-full max-w-md mx-auto flex flex-col items-center font-sans">
+            {/* Balance & Stats Header */}
+            <div className="flex items-center gap-4 mb-6 w-full justify-between">
+                <div className="bg-white border border-stone-200 px-4 py-2 rounded-lg flex items-center gap-2 text-stone-800 shadow-2xs">
+                    <Coins className="text-stone-700" size={16} />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">Balance:</span>
+                    <span className="text-base font-bold font-mono text-stone-900">{balance}</span>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-xl shadow-lg flex items-center gap-3">
-                    <Trophy className="text-stone-200" size={20} />
-                    <span className="text-stone-200 text-xs font-bold uppercase tracking-widest">Last Win:</span>
-                    <span className="text-2xl font-bold text-stone-100 tracking-tighter">{lastWin}</span>
+                <div className="bg-white border border-stone-200 px-4 py-2 rounded-lg flex items-center gap-2 text-stone-800 shadow-2xs">
+                    <Trophy className="text-stone-700" size={16} />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">Last Win:</span>
+                    <span className="text-base font-bold font-mono text-stone-900">+{lastWin}</span>
                 </div>
             </div>
 
-            {/* The Machine - Scaled Down */}
-            <div className="relative p-1 bg-stone-900 rounded-[2rem] shadow-2xl border-4 border-stone-800 w-full max-w-md mb-8">
-                <div className="bg-stone-950 rounded-[1.8rem] p-6 overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
-
-                    {/* Reels Grid */}
-                    <div className="grid grid-cols-3 gap-3 mb-8">
-                        {reels.map((symbol, i) => (
-                            <div
-                                key={i}
-                                className={clsx(
-                                    "aspect-square bg-gradient-to-b from-stone-900 to-stone-950 rounded-2xl border border-stone-800 shadow-inner flex items-center justify-center text-4xl md:text-5xl transition-all duration-75",
-                                    isSpinning && "blur-[1px] scale-95"
-                                )}
-                            >
-                                {symbol}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Spin Button */}
-                    <div className="flex justify-center">
-                        <button
-                            onClick={spin}
-                            disabled={isSpinning || balance < 10}
+            {/* Main Machine Container */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm w-full mb-6 text-center">
+                {/* Reels Grid */}
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                    {reels.map((symbol, i) => (
+                        <div
+                            key={i}
                             className={clsx(
-                                "group relative px-10 py-4 rounded-xl font-black text-lg uppercase tracking-widest transition-all duration-300",
-                                isSpinning || balance < 10
-                                    ? "bg-stone-800 text-stone-600 cursor-not-allowed"
-                                    : "bg-stone-100 text-stone-900 hover:scale-105 active:scale-95 shadow-lg border border-white/20"
+                                "aspect-square bg-stone-50 rounded-xl border border-stone-200 flex items-center justify-center text-4xl select-none transition-transform duration-75",
+                                isSpinning && "scale-95 opacity-80"
                             )}
                         >
-                            <span className="relative z-10 flex items-center gap-2">
-                                {isSpinning ? "???" : "Spin"}
-                                {!isSpinning && (balance >= 10) && <RotateCcw size={18} />}
-                            </span>
-                        </button>
-                    </div>
-
-                    {/* Status Message */}
-                    <p className={clsx(
-                        "text-center mt-6 font-bold tracking-widest uppercase text-xs h-4",
-                        lastWin > 0 ? "text-yellow-400" : "text-stone-500"
-                    )}>
-                        {message}
-                    </p>
-                </div>
-            </div>
-
-            {/* Simplified Earnings Table */}
-            <div className="w-full max-w-sm bg-stone-900/40 backdrop-blur-sm border border-white/5 p-6 rounded-2xl">
-                <h3 className="text-xs font-bold text-stone-400 uppercase tracking-[0.2em] mb-4 text-center">Paytable</h3>
-                <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                    {Object.entries(PAYTABLE).map(([combo, payout]) => (
-                        <div key={combo} className="flex justify-between items-center text-sm border-b border-white/5 pb-1">
-                            <span className="tracking-widest">{combo}</span>
-                            <span className="font-bold text-stone-200">x{payout}</span>
+                            {symbol}
                         </div>
                     ))}
-                    {/* Consolation prize entry */}
-                    <div className="flex justify-between items-center text-xs border-b border-white/5 pb-1 italic text-stone-400">
-                        <span className="tracking-tight italic">Any 2 Same</span>
-                        <span className="font-bold">x2</span>
+                </div>
+
+                {/* Spin Button */}
+                <button
+                    onClick={spin}
+                    disabled={isSpinning || balance < 10}
+                    className={clsx(
+                        "w-full py-3 px-6 rounded-xl font-semibold text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xs",
+                        isSpinning || balance < 10
+                            ? "bg-stone-200 text-stone-400 cursor-not-allowed"
+                            : "bg-stone-900 text-white hover:bg-stone-800 active:scale-98"
+                    )}
+                >
+                    <RotateCcw size={15} className={clsx(isSpinning && "animate-spin")} />
+                    {isSpinning ? "Spinning..." : "Spin (10 Tokens)"}
+                </button>
+
+                {/* Message */}
+                <p className="text-xs font-semibold uppercase tracking-wider mt-4 h-4 text-stone-500">
+                    {message}
+                </p>
+            </div>
+
+            {/* Paytable */}
+            <div className="w-full bg-white border border-stone-200/90 p-5 rounded-xl text-stone-700 text-xs">
+                <h3 className="font-semibold text-stone-900 uppercase tracking-wider text-center mb-3 text-[11px]">
+                    Paytable Summary
+                </h3>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-1.5 font-mono">
+                    {Object.entries(PAYTABLE).map(([combo, payout]) => (
+                        <div key={combo} className="flex justify-between items-center border-b border-stone-100 pb-1">
+                            <span>{combo}</span>
+                            <span className="font-semibold text-stone-900">x{payout}</span>
+                        </div>
+                    ))}
+                    <div className="flex justify-between items-center border-b border-stone-100 pb-1 text-stone-500">
+                        <span>Any 2 Same</span>
+                        <span className="font-semibold text-stone-900">x2</span>
                     </div>
                 </div>
             </div>
